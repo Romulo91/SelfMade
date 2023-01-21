@@ -6,13 +6,4 @@ module.exports = function (app) {
       target: 'http://localhost:5500',
     })
   );
-  app.use(
-    ['/socket'],
-    createProxyMiddleware({
-      target: 'http:localhost:5500',
-      changeOrigin: true,
-      ws: true,
-      logLevel: 'debug',
-    })
-  );
 };

@@ -12,7 +12,7 @@ module.exports = (app) => {
     '/auth/google/callback',
     passport.authenticate('google'),
     (req, res) => {
-      res.redirect('/home');
+      res.redirect('/landing');
     }
   );
 
@@ -25,5 +25,3 @@ module.exports = (app) => {
     res.send(req.user);
   });
 };
-
-// fetchBasicProfile: true, => for profile fullname
